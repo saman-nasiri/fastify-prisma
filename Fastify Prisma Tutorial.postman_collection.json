@@ -125,10 +125,10 @@
 			]
 		},
 		{
-			"name": "Product",
+			"name": "Category",
 			"item": [
 				{
-					"name": "Create product",
+					"name": "Create category",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -155,7 +155,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"A cool product\",\n    \"price\": 14.99,\n    \"content\": \"This is actually an sick product\"\n}",
+							"raw": "{\n    \"title\": \"A cool category\",\n    \"price\": 14.99,\n    \"content\": \"This is actually an sick category\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -163,31 +163,31 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/api/products",
+							"raw": "{{host}}/api/categorys",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"api",
-								"products"
+								"categorys"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get products",
+					"name": "Get categorys",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/api/products",
+							"raw": "{{host}}/api/categorys",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"api",
-								"products"
+								"categorys"
 							]
 						}
 					},

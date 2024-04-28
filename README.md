@@ -19,8 +19,8 @@ Video: https://youtu.be/LMoMHP44-xM
 * Create a user
 * Login
 * List users
-* Create a product
-* List products
+* Create a category
+* List categorys
 * Authentication
 * Request & response validation
 * Swagger docs
@@ -36,8 +36,8 @@ Video: https://youtu.be/LMoMHP44-xM
 5. List users
 6. Login
     * fastify-jwt setup
-7. Create product
-8. List products
+7. Create category
+8. List categorys
 
 # Testing
 ## What are we testing with?

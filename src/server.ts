@@ -3,9 +3,9 @@ import fjwt, { JWT } from "fastify-jwt";
 import swagger from "fastify-swagger";
 import { withRefResolver } from "fastify-zod";
 import userRoutes from "./modules/user/user.route";
-import productRoutes from "./modules/product/product.route";
+import categoryRoutes from "./modules/category/category.route";
 import { userSchemas } from "./modules/user/user.schema";
-import { productSchemas } from "./modules/product/product.schema";
+import { categorySchemas } from "./modules/category/category.schema";
 import { version } from "../package.json";
 
 declare module "fastify" {
@@ -54,7 +54,7 @@ function buildServer() {
     return next();
   });
 
-  for (const schema of [...userSchemas, ...productSchemas]) {
+  for (const schema of [...userSchemas, ...categorySchemas]) {
     server.addSchema(schema);
   }
 
@@ -67,7 +67,7 @@ function buildServer() {
       openapi: {
         info: {
           title: "Fastify API",
-          description: "API for some products",
+          description: "API for some categorys",
           version,
         },
       },
@@ -75,7 +75,7 @@ function buildServer() {
   );
 
   server.register(userRoutes, { prefix: "api/users" });
-  server.register(productRoutes, { prefix: "api/products" });
+  server.register(categoryRoutes, { prefix: "api/categorys" });
 
   return server;
 }
