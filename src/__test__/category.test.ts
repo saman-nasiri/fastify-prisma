@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import request from 'supertest';
 import { FastifyInstance } from 'fastify';
-import createApp from '../../app'; // Import your Fastify app creation function
-import prisma from '../../utils/prisma';
+import createApp from '../app'; // Import your Fastify app creation function
+import prisma from '../utils/prisma';
 
 describe('Category Service', () => {
   let app: FastifyInstance;
